@@ -19,3 +19,19 @@ git remote show origin
 rmdir /s /q .git
 ```
 只要删除了这个.git文件夹，就实现了脱离版本控制
+## 更改全局的用户名和邮箱
+```dotnetcli
+git config --global user.name "wca_admin"
+git config --global user.email "602514418@qq.com"
+```
+查看两种信息
+```dotnetcli
+git config --global user.name
+git config --global user.email
+```
+## 配置ssh免密登录
++ 首先进入目录例如C:\Users\admin\\.ssh
++ 生成密钥对（如果已经有了就不用重新生成了）
+```dotnetcli
+ssh-keygen -t rsa -C "邮箱"
+```
